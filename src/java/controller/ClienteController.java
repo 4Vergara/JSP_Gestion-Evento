@@ -71,7 +71,7 @@ public class ClienteController extends HttpServlet {
         ClienteDaoJDBC clienteDao = new ClienteDaoJDBC();
         clienteDao.insertar(cliente);
 
-        processRequest(request, response);
+        response.sendRedirect("http://localhost:8080/Gestion_Eventos/templates/clients/formaPago.jsp");
 
     }
 
