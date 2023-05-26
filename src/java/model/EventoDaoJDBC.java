@@ -21,13 +21,14 @@ public class EventoDaoJDBC {
             Connection cn = con.connect();
             PreparedStatement stmt;
 
-            String SQL_SELECT_NOMBRES = "SELECT nombre FROM evento";           
+            String SQL_SELECT_NOMBRES = "SELECT nombre , descripcion FROM evento";           
             
             stmt = cn.prepareStatement(SQL_SELECT_NOMBRES);
             ResultSet rs = stmt.executeQuery();
             while (rs.next()) {
                 Evento evento = new Evento();
                 evento.setNombre(rs.getString(1));
+                evento.setDescripcion(rs.getString(2));
                 nombres.add(evento);
             }
             System.out.println("Se encontraron eventos ");

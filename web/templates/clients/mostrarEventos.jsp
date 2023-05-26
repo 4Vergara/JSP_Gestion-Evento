@@ -45,6 +45,9 @@
 </head>
 
 <body>
+    <%@page import="java.util.List"%>
+    <%@page import="domain.Evento"%>
+    <%@page import="model.EventoDaoJDBC"%>
     <div class="container-xxl position-relative bg-white d-flex p-0">
         <!-- Spinner Start -->
         <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
@@ -53,65 +56,93 @@
             </div>
         </div>
         <!-- Spinner End -->
+        
+        <style>
+            /* Estilos para la barra superior */
+            .top-bar-carlos {
+                background-color: #ffffff;
+                padding: 10px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
 
+            /* Estilos para el h1 dentro de la barra */
+            .top-bar-carlos h1 {
+                margin: 0;
+                font-size: 50px; /* Ajusta el tamaño de fuente según tus necesidades */
+            }
 
-        <!-- Sidebar Start -->
-        <div class="sidebar pe-4 pb-3">
-            <nav class="navbar bg-light navbar-light">
-                <a href="index.jsp" class="navbar-brand mx-4 mb-3">
-                    <h3 class="text-primary"><i class="fa me-2"></i>Logistic</h3>
-                </a>                
-            </nav>
-        </div>
-        <!-- Sidebar End -->
+            /* Estilos para el botón dentro de la barra */
+            .top-bar-carlos .nav-link {
+                margin-left: auto;                
+            }
+            /* Estilos para posicionar el título en la esquina superior izquierda */
+            h1.text-primary {
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
 
+            /* Estilos para posicionar el botón en la esquina superior derecha */
+            form.nav-link {
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+            /* Estilos para posicionar el footer en la parte inferior */
+            footer {
+                position: fixed;
+                bottom: 0;
+                left: 0;                
+                width: 100%;
+                background-color: #ffffff;
+            }
+            
+        </style>
 
+        
+        
         <!-- Content Start -->
-        <div class="content">
-            <!-- Navbar Start -->            
-            <nav class="navbar navbar-expand bg-light navbar-light sticky-top px-4 py-0">
-                <nav class="navbar bg-light navbar-light">
-                    <a href="index.jsp" class="navbar-brand mx-4 mb-3">                        
-                    </a>                
-                </nav>                              
-                <div class="navbar-nav align-items-center ms-auto justify-content-end">                    
-                    <div class="nav-item dropdown">
-                        <form action="http://localhost:8080/Gestion_Eventos/templates/clients/registrarse.jsp" method="get" class="nav-link">                            
-                            <button type="submit" class="btn btn-primary py-2 w-100 mb-3">Registrarte</button>
-                        </form>                        
-                    </div>                                        
-                </div>
-            </nav>
-            <!-- Navbar End -->
-
-            <!-- Navbar End -->
-
-
-            <!-- Blank Start -->
+        
+        <!-- Principal -->
             <div class="container-fluid pt-4 px-4">
-                <div class="row vh-100 bg-light rounded align-items-center justify-content-center mx-0">
-                    <div class="col-md-6 text-center">
-                        <h3>This is blank page</h3>
+                <div class="top-bar-carlos">
+                    <a href="http://localhost:8080/Gestion_Eventos/templates/clients/mostrarEventos.jsp" class="">
+                        <h1 class="text-primary"><i class="fa me-2"></i>Logistic</h1>
+                    </a>
+                    <form action="http://localhost:8080/Gestion_Eventos/templates/clients/registrarse.jsp" method="get" class="nav-link">
+                        <button type="submit" class="btn btn-primary py-2">Registrarte</button>
+                    </form>
+                </div>
+                <div class="row vh-100 bg-light rounded align-items-center justify-content-center mx-0 mt-4">
+                    <% List<Evento> eventos = EventoDaoJDBC.getNombres();
+                    for (Evento evento : eventos) { %>
+                    <div class="col-md-12 text-center border-bottom py-5">
+                        <h3><%= evento.getNombre() %></h3>
+                        <p><%= evento.getDescripcion() %></p>
+                        <!-- Agrega más información sobre el evento según sea necesario -->
                     </div>
+                    <% } %>
                 </div>
             </div>
-            <!-- Blank End -->
+            <!-- Principal -->
 
 
-            <!-- Footer Start -->
-            <div class="container-fluid pt-4 px-4">
-                <div class="bg-light rounded-top p-4">
-                    <div class="row">
-                        <div class="col-12 col-sm-6 text-center text-sm-start">
-                            &copy; <a href="#">Logistic</a>, Todos los derechso reservados. 
-                        </div>
-                        <div class="col-12 col-sm-6 text-center text-sm-end">
-                            <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                            Diseñado por <a href="https://htmlcodex.com">HTML Codex</a>
+            <!--<footer>
+                <div class="container-fluid pt-4 px-4">
+                    <div class="bg-light rounded-top p-4">
+                        <div class="row">
+                            <div class="col-12 col-sm-6 text-center text-sm-start">
+                                &copy; <a href="#">Logistic</a>, Todos los derechos reservados.
+                            </div>
+                            <div class="col-12 col-sm-6 text-center text-sm-end">                                
+                                Diseñado por <a href="https://htmlcodex.com">HTML Codex</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </footer>-->
             <!-- Footer End -->
         </div>
         <!-- Content End -->
