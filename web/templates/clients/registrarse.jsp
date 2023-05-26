@@ -68,44 +68,74 @@
                             </a>
                             <h3>Registrate</h3>
                         </div>
-                        <form action="../../ClienteController" method="get">
+                        <form action="../../ClienteController" method="get" onsubmit="return validarFormulario()">
                             <div class="form-floating mb-3">
-                                <input type="text" name="nombre" class="form-control" id="floatingText" placeholder="Nombre">
+                                <input type="text" name="nombre" class="form-control" id="floatingText" placeholder="Nombre" required pattern="[A-Za-z\s]+">
                                 <label for="floatingText">Nombre</label>
                             </div>
                             <div class="form-floating mb-3">
-                                <input type="text" name="apellido" class="form-control" id="floatingText" placeholder="Apellido">
+                                <input type="text" name="apellido" class="form-control" id="floatingText" placeholder="Apellido" required pattern="[A-Za-z\s]+">
                                 <label for="floatingText">Apellido</label>
                             </div>
                             <div class="form-floating mb-3">
-                                <input type="text" name="cedula" class="form-control" id="floatingCedula" placeholder="123456789">
+                                <input type="text" name="cedula" class="form-control" id="floatingCedula" placeholder="123456789" required pattern="[0-9]+">
                                 <label for="floatingCedula">Cédula</label>
                             </div>
                             <div class="form-floating mb-3">
-                                <input type="text" name="telefono" class="form-control" id="floatingTelefono" placeholder="123456789">
+                                <input type="text" name="telefono" class="form-control" id="floatingTelefono" placeholder="123456789" required pattern="[0-9]+">
                                 <label for="floatingTelefono">Teléfono</label>
                             </div>
                             <div class="form-floating mb-3">
-                                <input type="email" name="correo" class="form-control" id="floatingInput" placeholder="nombre@ejemplo.com">
+                                <input type="email" name="correo" class="form-control" id="floatingInput" placeholder="nombre@ejemplo.com" required>
                                 <label for="floatingInput">Correo</label>
                             </div>
                             <div class="form-floating mb-3">
-                                <select class="form-select" id="eventoSelect">
+                                <select class="form-select" id="eventoSelect" required>
                                     <option value="" selected disabled>Selecciona un evento</option>
-                                    <%
-                                        List<Evento> eventos = EventoDaoJDBC.getNombres();
-                                        for (Evento evento : eventos) {
-                                    %>
+                                    <% List<Evento> eventos = EventoDaoJDBC.getNombres();
+                                    for (Evento evento : eventos) { %>
                                         <option value="<%= evento.getNombre() %>"><%= evento.getNombre() %></option>
-                                    <%
-                                        }
-                                    %>
+                                    <% } %>
                                 </select>
                                 <label for="eventoSelect">Evento</label>
                             </div>
                             <button type="submit" name="submit" class="btn btn-primary py-3 w-100 mb-4">Registrarte</button>
-                        </form>                          
-                        <p class="text-center mb-0">¿Ya estas registrado? <a href="">Ingresar</a></p>
+                        </form>
+
+                        <script>
+                            function validarFormulario() {
+                                // Validar el campo nombre
+                                var nombre = document.querySelector('input[name="nombre"]').value;
+                                if (!/^[A-Za-z\s]+$/.test(nombre)) {
+                                    alert("El nombre solo puede contener letras.");
+                                    return false;
+                                }
+
+                                // Validar el campo apellido
+                                var apellido = document.querySelector('input[name="apellido"]').value;
+                                if (!/^[A-Za-z\s]+$/.test(apellido)) {
+                                    alert("El apellido solo puede contener letras.");
+                                    return false;
+                                }
+
+                                // Validar el campo cedula
+                                var cedula = document.querySelector('input[name="cedula"]').value;
+                                if (!/^[0-9]+$/.test(cedula)) {
+                                    alert("La cédula solo puede contener números.");
+                                    return false;
+                                }
+
+                                // Validar el campo telefono
+                                var telefono = document.querySelector('input[name="telefono"]').value;
+                                if (!/^[0-9]+$/.test(telefono)) {
+                                    alert("El teléfono solo puede contener números.");
+                                    return false;
+                                }
+
+                                // Si todos los campos son válidos, se puede enviar el formulario
+                                return true;                                
+                        </script>
+                      
                     </div>
                 </div>
             </div>
