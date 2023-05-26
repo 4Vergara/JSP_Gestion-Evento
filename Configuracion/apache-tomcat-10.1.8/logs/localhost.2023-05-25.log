@@ -872,3 +872,446 @@ Stacktrace:
 		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 		at java.base/java.lang.Thread.run(Thread.java:833)
+25-May-2023 01:55:52.678 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+25-May-2023 01:55:52.678 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+25-May-2023 14:01:03.496 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+25-May-2023 14:01:03.497 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+25-May-2023 14:01:03.500 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@7eae3764')
+25-May-2023 14:01:44.787 SEVERE [http-nio-8080-exec-4] org.apache.catalina.core.StandardWrapperValve.invoke El Servlet.service() para el servlet [jsp] en el contexto con ruta [/Gestion_Eventos] lanzó la excepción [No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [91] en el archivo jsp: [/templates/clients/registrarse.jsp]
+Connection cannot be resolved to a type
+88:                             </div>
+89:                             <%
+90:                                 // Establecer conexión a la base de datos
+91:                                 Connection conn = null;
+92:                                 Statement stmt = null;
+93:                                 ResultSet rs = null;
+94: 
+
+
+Ha tenido lugar un error en la línea: [92] en el archivo jsp: [/templates/clients/registrarse.jsp]
+Statement cannot be resolved to a type
+89:                             <%
+90:                                 // Establecer conexión a la base de datos
+91:                                 Connection conn = null;
+92:                                 Statement stmt = null;
+93:                                 ResultSet rs = null;
+94: 
+95:                                 try {
+
+
+Ha tenido lugar un error en la línea: [93] en el archivo jsp: [/templates/clients/registrarse.jsp]
+ResultSet cannot be resolved to a type
+90:                                 // Establecer conexión a la base de datos
+91:                                 Connection conn = null;
+92:                                 Statement stmt = null;
+93:                                 ResultSet rs = null;
+94: 
+95:                                 try {
+96:                                    // Cargar el driver JDBC
+
+
+Ha tenido lugar un error en la línea: [103] en el archivo jsp: [/templates/clients/registrarse.jsp]
+DriverManager cannot be resolved
+100:                                    String url = "jdbc:mysql://localhost:3306/gestion_evento?useSSL=false&useTimezone=true&serverTimezone=UTC&allowPublicKeyRetrieval=true";
+101:                                    String username = "root";
+102:                                    String password = "root";
+103:                                    conn = DriverManager.getConnection(url, username, password);
+104: 
+105:                                    // Crear el objeto Statement para ejecutar consultas SQL
+106:                                    stmt = conn.createStatement();
+
+
+Ha tenido lugar un error en la línea: [113] en el archivo jsp: [/templates/clients/registrarse.jsp]
+List cannot be resolved to a type
+110:                                    rs = stmt.executeQuery(query);
+111: 
+112:                                    // Crear una lista para almacenar los nombres de los eventos
+113:                                    List<String> eventos = new ArrayList<>();
+114: 
+115:                                    // Recorrer los resultados de la consulta y guardar los nombres en la lista
+116:                                    while (rs.next()) {
+
+
+Ha tenido lugar un error en la línea: [113] en el archivo jsp: [/templates/clients/registrarse.jsp]
+ArrayList cannot be resolved to a type
+110:                                    rs = stmt.executeQuery(query);
+111: 
+112:                                    // Crear una lista para almacenar los nombres de los eventos
+113:                                    List<String> eventos = new ArrayList<>();
+114: 
+115:                                    // Recorrer los resultados de la consulta y guardar los nombres en la lista
+116:                                    while (rs.next()) {
+
+
+Ha tenido lugar un error en la línea: [125] en el archivo jsp: [/templates/clients/registrarse.jsp]
+SQLException cannot be resolved to a type
+122:                                    rs.close();
+123:                                    stmt.close();
+124:                                    conn.close();
+125:                                 } catch (SQLException | ClassNotFoundException e) {
+126:                                    e.printStackTrace();
+127:                                 }
+128:                              %>
+
+
+Ha tenido lugar un error en la línea: [132] en el archivo jsp: [/templates/clients/registrarse.jsp]
+eventos cannot be resolved to a variable
+129:                              <div class="form-floating mb-3">
+130:                                 <select class="form-select" id="eventoSelect">
+131:                                    <option value="" selected disabled>Selecciona un evento</option>
+132:                                    <% for (String evento : eventos) { %>
+133:                                       <option value="<%= evento %>"><%= evento %></option>
+134:                                    <% } %>
+135:                                 </select>
+
+
+Stacktrace:] con causa raíz
+	org.apache.jasper.JasperException: No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [91] en el archivo jsp: [/templates/clients/registrarse.jsp]
+Connection cannot be resolved to a type
+88:                             </div>
+89:                             <%
+90:                                 // Establecer conexión a la base de datos
+91:                                 Connection conn = null;
+92:                                 Statement stmt = null;
+93:                                 ResultSet rs = null;
+94: 
+
+
+Ha tenido lugar un error en la línea: [92] en el archivo jsp: [/templates/clients/registrarse.jsp]
+Statement cannot be resolved to a type
+89:                             <%
+90:                                 // Establecer conexión a la base de datos
+91:                                 Connection conn = null;
+92:                                 Statement stmt = null;
+93:                                 ResultSet rs = null;
+94: 
+95:                                 try {
+
+
+Ha tenido lugar un error en la línea: [93] en el archivo jsp: [/templates/clients/registrarse.jsp]
+ResultSet cannot be resolved to a type
+90:                                 // Establecer conexión a la base de datos
+91:                                 Connection conn = null;
+92:                                 Statement stmt = null;
+93:                                 ResultSet rs = null;
+94: 
+95:                                 try {
+96:                                    // Cargar el driver JDBC
+
+
+Ha tenido lugar un error en la línea: [103] en el archivo jsp: [/templates/clients/registrarse.jsp]
+DriverManager cannot be resolved
+100:                                    String url = "jdbc:mysql://localhost:3306/gestion_evento?useSSL=false&useTimezone=true&serverTimezone=UTC&allowPublicKeyRetrieval=true";
+101:                                    String username = "root";
+102:                                    String password = "root";
+103:                                    conn = DriverManager.getConnection(url, username, password);
+104: 
+105:                                    // Crear el objeto Statement para ejecutar consultas SQL
+106:                                    stmt = conn.createStatement();
+
+
+Ha tenido lugar un error en la línea: [113] en el archivo jsp: [/templates/clients/registrarse.jsp]
+List cannot be resolved to a type
+110:                                    rs = stmt.executeQuery(query);
+111: 
+112:                                    // Crear una lista para almacenar los nombres de los eventos
+113:                                    List<String> eventos = new ArrayList<>();
+114: 
+115:                                    // Recorrer los resultados de la consulta y guardar los nombres en la lista
+116:                                    while (rs.next()) {
+
+
+Ha tenido lugar un error en la línea: [113] en el archivo jsp: [/templates/clients/registrarse.jsp]
+ArrayList cannot be resolved to a type
+110:                                    rs = stmt.executeQuery(query);
+111: 
+112:                                    // Crear una lista para almacenar los nombres de los eventos
+113:                                    List<String> eventos = new ArrayList<>();
+114: 
+115:                                    // Recorrer los resultados de la consulta y guardar los nombres en la lista
+116:                                    while (rs.next()) {
+
+
+Ha tenido lugar un error en la línea: [125] en el archivo jsp: [/templates/clients/registrarse.jsp]
+SQLException cannot be resolved to a type
+122:                                    rs.close();
+123:                                    stmt.close();
+124:                                    conn.close();
+125:                                 } catch (SQLException | ClassNotFoundException e) {
+126:                                    e.printStackTrace();
+127:                                 }
+128:                              %>
+
+
+Ha tenido lugar un error en la línea: [132] en el archivo jsp: [/templates/clients/registrarse.jsp]
+eventos cannot be resolved to a variable
+129:                              <div class="form-floating mb-3">
+130:                                 <select class="form-select" id="eventoSelect">
+131:                                    <option value="" selected disabled>Selecciona un evento</option>
+132:                                    <% for (String evento : eventos) { %>
+133:                                       <option value="<%= evento %>"><%= evento %></option>
+134:                                    <% } %>
+135:                                 </select>
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:513)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:402)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:396)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:676)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+25-May-2023 15:16:53.456 SEVERE [http-nio-8080-exec-19] org.apache.catalina.core.StandardWrapperValve.invoke El Servlet.service() para el servlet [jsp] en el contexto con ruta [/Gestion_Eventos] lanzó la excepción [La uri absoluta: [http://java.sun.com/jsp/jstl/core] no puede resolverse o en web.xml o el los archivos jar desplegados con esta aplicación] con causa raíz
+	org.apache.jasper.JasperException: La uri absoluta: [http://java.sun.com/jsp/jstl/core] no puede resolverse o en web.xml o el los archivos jar desplegados con esta aplicación
+		at org.apache.jasper.compiler.DefaultErrorHandler.jspError(DefaultErrorHandler.java:54)
+		at org.apache.jasper.compiler.ErrorDispatcher.dispatch(ErrorDispatcher.java:294)
+		at org.apache.jasper.compiler.ErrorDispatcher.jspError(ErrorDispatcher.java:81)
+		at org.apache.jasper.compiler.TagLibraryInfoImpl.generateTldResourcePath(TagLibraryInfoImpl.java:251)
+		at org.apache.jasper.compiler.TagLibraryInfoImpl.<init>(TagLibraryInfoImpl.java:122)
+		at org.apache.jasper.compiler.Parser.parseTaglibDirective(Parser.java:429)
+		at org.apache.jasper.compiler.Parser.parseDirective(Parser.java:487)
+		at org.apache.jasper.compiler.Parser.parseElements(Parser.java:1444)
+		at org.apache.jasper.compiler.Parser.parse(Parser.java:138)
+		at org.apache.jasper.compiler.ParserController.doParse(ParserController.java:245)
+		at org.apache.jasper.compiler.ParserController.parse(ParserController.java:106)
+		at org.apache.jasper.compiler.Compiler.generateJava(Compiler.java:211)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:396)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:396)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:676)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+25-May-2023 15:21:35.719 SEVERE [http-nio-8080-exec-43] org.apache.catalina.core.StandardWrapperValve.invoke El Servlet.service() para el servlet [jsp] en el contexto con ruta [/Gestion_Eventos] lanzó la excepción [java.lang.NoClassDefFoundError: javax/servlet/jsp/tagext/TagLibraryValidator] con causa raíz
+	java.lang.ClassNotFoundException: javax.servlet.jsp.tagext.TagLibraryValidator
+		at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1437)
+		at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1245)
+		at java.base/java.lang.ClassLoader.defineClass1(Native Method)
+		at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1013)
+		at java.base/java.security.SecureClassLoader.defineClass(SecureClassLoader.java:150)
+		at org.apache.catalina.loader.WebappClassLoaderBase.findClassInternal(WebappClassLoaderBase.java:2487)
+		at org.apache.catalina.loader.WebappClassLoaderBase.findClass(WebappClassLoaderBase.java:865)
+		at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1401)
+		at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1245)
+		at java.base/java.lang.ClassLoader.defineClass1(Native Method)
+		at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1013)
+		at java.base/java.security.SecureClassLoader.defineClass(SecureClassLoader.java:150)
+		at org.apache.catalina.loader.WebappClassLoaderBase.findClassInternal(WebappClassLoaderBase.java:2487)
+		at org.apache.catalina.loader.WebappClassLoaderBase.findClass(WebappClassLoaderBase.java:865)
+		at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1401)
+		at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1245)
+		at org.apache.jasper.compiler.TagLibraryInfoImpl.createValidator(TagLibraryInfoImpl.java:355)
+		at org.apache.jasper.compiler.TagLibraryInfoImpl.<init>(TagLibraryInfoImpl.java:195)
+		at org.apache.jasper.compiler.Parser.parseTaglibDirective(Parser.java:429)
+		at org.apache.jasper.compiler.Parser.parseDirective(Parser.java:487)
+		at org.apache.jasper.compiler.Parser.parseElements(Parser.java:1444)
+		at org.apache.jasper.compiler.Parser.parse(Parser.java:138)
+		at org.apache.jasper.compiler.ParserController.doParse(ParserController.java:245)
+		at org.apache.jasper.compiler.ParserController.parse(ParserController.java:106)
+		at org.apache.jasper.compiler.Compiler.generateJava(Compiler.java:211)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:396)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:396)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:676)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+25-May-2023 15:56:15.968 SEVERE [http-nio-8080-exec-93] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() para servlet [ClienteController] lanzó excepción
+	java.lang.NumberFormatException: For input string: ""
+		at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+		at java.base/java.lang.Long.parseLong(Long.java:721)
+		at java.base/java.lang.Long.parseLong(Long.java:834)
+		at controller.ClienteController.doGet(ClienteController.java:52)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:676)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+25-May-2023 15:56:21.913 SEVERE [http-nio-8080-exec-98] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() para servlet [ClienteController] lanzó excepción
+	java.lang.NumberFormatException: For input string: ""
+		at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+		at java.base/java.lang.Long.parseLong(Long.java:721)
+		at java.base/java.lang.Long.parseLong(Long.java:834)
+		at controller.ClienteController.doGet(ClienteController.java:52)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:676)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+25-May-2023 16:08:00.572 SEVERE [http-nio-8080-exec-109] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() para servlet [ClienteController] lanzó excepción
+	java.lang.NumberFormatException: For input string: ""
+		at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+		at java.base/java.lang.Long.parseLong(Long.java:721)
+		at java.base/java.lang.Long.parseLong(Long.java:834)
+		at controller.ClienteController.doGet(ClienteController.java:52)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:676)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+25-May-2023 16:10:03.803 SEVERE [http-nio-8080-exec-113] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() para servlet [ClienteController] lanzó excepción
+	java.lang.NumberFormatException: For input string: "123456777a"
+		at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+		at java.base/java.lang.Long.parseLong(Long.java:711)
+		at java.base/java.lang.Long.parseLong(Long.java:834)
+		at controller.ClienteController.doGet(ClienteController.java:52)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:676)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+25-May-2023 23:07:31.768 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+25-May-2023 23:07:31.770 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()

@@ -74,22 +74,12 @@
                     <a href="index.jsp" class="navbar-brand mx-4 mb-3">                        
                     </a>                
                 </nav>                              
-                <div class="navbar-nav align-items-center ms-auto justify-content-end">
-                    <div class="nav-item dropdown">
-                        <form action="http://localhost:8080/Gestion_Eventos/templates/clients/descargarCertificado.jsp" method="get" class="nav-link">
-                            <button type="submit" class="btn btn-primary py-2 w-100 mb-3">Descargar certificado</button>
-                        </form>                           
-                    </div>
+                <div class="navbar-nav align-items-center ms-auto justify-content-end">                    
                     <div class="nav-item dropdown">
                         <form action="http://localhost:8080/Gestion_Eventos/templates/clients/registrarse.jsp" method="get" class="nav-link">                            
                             <button type="submit" class="btn btn-primary py-2 w-100 mb-3">Registrarte</button>
                         </form>                        
-                    </div>
-                    <div class="nav-item dropdown">
-                        <form action="http://localhost:8080/Gestion_Eventos/templates/clients/ingresar.jsp" method="get" class="nav-link">                            
-                            <button type="submit" class="btn btn-primary py-2 w-100 mb-3">Ingresar</button>
-                        </form>                        
-                    </div>                      
+                    </div>                                        
                 </div>
             </nav>
             <!-- Navbar End -->

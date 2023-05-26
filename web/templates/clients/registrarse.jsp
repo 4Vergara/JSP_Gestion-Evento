@@ -45,6 +45,9 @@
 </head>
 
 <body>
+    <%@page import="java.util.List"%>
+    <%@page import="domain.Evento"%>
+    <%@page import="model.EventoDaoJDBC"%>
     <div class="container-xxl position-relative bg-white d-flex p-0">
         <!-- Spinner Start -->
         <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
@@ -87,14 +90,18 @@
                                 <label for="floatingInput">Correo</label>
                             </div>
                             <div class="form-floating mb-3">
-                            <select class="form-select" id="eventoSelect">
-                                <option value="" selected disabled>Selecciona un evento</option>
-                                <option value="evento1">Evento 1</option>
-                                <option value="evento2">Evento 2</option>
-                                <option value="evento3">Evento 3</option>
-                                <!-- Agrega más opciones de eventos según sea necesario -->
-                            </select>
-                            <label for="eventoSelect">Evento</label>
+                                <select class="form-select" id="eventoSelect">
+                                    <option value="" selected disabled>Selecciona un evento</option>
+                                    <%
+                                        List<Evento> eventos = EventoDaoJDBC.getNombres();
+                                        for (Evento evento : eventos) {
+                                    %>
+                                        <option value="<%= evento.getNombre() %>"><%= evento.getNombre() %></option>
+                                    <%
+                                        }
+                                    %>
+                                </select>
+                                <label for="eventoSelect">Evento</label>
                             </div>
                             <button type="submit" name="submit" class="btn btn-primary py-3 w-100 mb-4">Registrarte</button>
                         </form>                          
