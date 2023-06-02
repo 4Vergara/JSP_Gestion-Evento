@@ -45,6 +45,9 @@
 </head>
 
 <body>
+    <%@page import="java.util.List"%>
+    <%@page import="domain.Evento"%>
+    <%@page import="model.EventoDaoJDBC"%>
     <div class="container-xxl position-relative bg-white d-flex p-0">
         <!-- Spinner Start -->
         <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
@@ -63,25 +66,24 @@
                         <div class="d-flex align-items-center justify-content-between mb-3">
                             <a href="http://localhost:8080/Gestion_Eventos/templates/clients/mostrarEventos.jsp" class="">
                                 <h3 class="text-primary"><i class="fa me-2"></i>Logistic</h3>
-                            </a>
-                            <h3>Certificado</h3>
+                            </a>                            
                         </div>                      
-                            
+                        <h4>Realizar pago</h4>    
                         
                         <div class="form-floating mb-3">
                             <input type="text" class="form-control" id="floatingCedula" placeholder="123456789">
                             <label for="floatingCedula">Cédula</label>
                         </div>
                         <div class="form-floating mb-3">
-                            <select class="form-select" id="eventoSelect">
+                            <select class="form-select" id="eventoSelect" required>
                                 <option value="" selected disabled>Selecciona un evento</option>
-                                <option value="evento1">Evento 1</option>
-                                <option value="evento2">Evento 2</option>
-                                <option value="evento3">Evento 3</option>
-                                <!-- Agrega más opciones de eventos según sea necesario -->
+                                <% List<Evento> eventos = EventoDaoJDBC.getNombres();
+                                for (Evento evento : eventos) { %>
+                                    <option value="<%= evento.getNombre() %>"><%= evento.getNombre() %></option>
+                                <% } %>
                             </select>
                             <label for="eventoSelect">Evento</label>
-                        </div>                        
+                        </div>                       
                         <button type="submit" class="btn btn-primary py-3 w-100 mb-4">Ingresar</button>                        
                     </div>
                 </div>

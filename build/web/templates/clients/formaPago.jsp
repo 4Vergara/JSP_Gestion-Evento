@@ -38,12 +38,7 @@
     <link href="../../static/css/style.css" rel="stylesheet">
 </head>
 
-<body>
-    <style>
-        .registro-exitoso {
-            color: green;
-        }
-    </style>
+<body>    
     <div class="container-xxl position-relative bg-white d-flex p-0">
         <!-- Spinner Start -->
         <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
@@ -63,18 +58,19 @@
                             <a href="http://localhost:8080/Gestion_Eventos/templates/clients/mostrarEventos.jsp" class="">
                                 <h1 class="text-primary"><i class="fa me-2"></i>Logistic</h1>                                
                             </a>                            
-                        </div>                                               
-                        <h5 class="w-100">Formas de pago</h5>
-                        <form action="" class="nav-link">
-                            <button type="submit" class="btn btn-primary py-3 w-100 mb-4">Descargar recibo</button> 
-                        </form>
+                        </div>                                            
+                        
+                        <div class="alert alert-success w-100 mb-4" role="alert" style="font-size: larger; text-align: center">
+                            <strong>
+                                Inscripción exitosa
+                            </strong>                            
+                        </div>
                         <form action="http://localhost:8080/Gestion_Eventos/templates/clients/pagoEnLinea.jsp" method="get" class="nav-link">
                             <button type="submit" class="btn btn-primary py-3 w-100 mb-4">Pagar en linea</button>
                         </form>
                         <form action="http://localhost:8080/Gestion_Eventos/templates/clients/mostrarEventos.jsp" method="get" class="nav-link">
                             <button type="submit" class="btn btn-primary py-3 w-100 mb-4">Salir</button>
-                        </form>                        
-                        <h4 class="w-100 registro-exitoso">Registro Exitoso</h4>                            
+                        </form>                                                  
                     </div>
                 </div>
             </div>

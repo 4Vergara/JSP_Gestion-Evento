@@ -1,0 +1,91 @@
+31-May-2023 10:58:26.028 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Nombre de la versión del servidor: Apache Tomcat/10.1.8
+31-May-2023 10:58:26.033 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:                      Apr 14 2023 19:40:29 UTC
+31-May-2023 10:58:26.034 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Número de versión de servidor:     10.1.8.0
+31-May-2023 10:58:26.034 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:                           Windows 10
+31-May-2023 10:58:26.034 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Versión de Systema Operativo:      10.0
+31-May-2023 10:58:26.034 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Arquitectura:                      amd64
+31-May-2023 10:58:26.034 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:                         C:\Program Files\Java\jdk-18.0.2
+31-May-2023 10:58:26.034 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:                       18.0.2+9-61
+31-May-2023 10:58:26.034 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Vededor JVM:                       Oracle Corporation
+31-May-2023 10:58:26.034 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:                     C:\Users\Lytos\Documents\NetBeansProjects\JSP_Gestion-Evento\Configuracion\apache-tomcat-10.1.8
+31-May-2023 10:58:26.034 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:                     C:\Users\Lytos\Documents\NetBeansProjects\JSP_Gestion-Evento\Configuracion\apache-tomcat-10.1.8
+31-May-2023 10:58:26.058 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djava.util.logging.config.file=C:\Users\Lytos\Documents\NetBeansProjects\JSP_Gestion-Evento\Configuracion\apache-tomcat-10.1.8\conf\logging.properties
+31-May-2023 10:58:26.058 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+31-May-2023 10:58:26.058 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djdk.tls.ephemeralDHKeySize=2048
+31-May-2023 10:58:26.058 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+31-May-2023 10:58:26.059 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.lang=ALL-UNNAMED
+31-May-2023 10:58:26.059 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.io=ALL-UNNAMED
+31-May-2023 10:58:26.059 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.util=ALL-UNNAMED
+31-May-2023 10:58:26.059 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+31-May-2023 10:58:26.059 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+31-May-2023 10:58:26.059 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Dcatalina.base=C:\Users\Lytos\Documents\NetBeansProjects\JSP_Gestion-Evento\Configuracion\apache-tomcat-10.1.8
+31-May-2023 10:58:26.059 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Dcatalina.home=C:\Users\Lytos\Documents\NetBeansProjects\JSP_Gestion-Evento\Configuracion\apache-tomcat-10.1.8
+31-May-2023 10:58:26.059 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djava.io.tmpdir=C:\Users\Lytos\Documents\NetBeansProjects\JSP_Gestion-Evento\Configuracion\apache-tomcat-10.1.8\temp
+31-May-2023 10:58:26.063 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Cargada la biblioteca nativa APR de Apache Tomcat [2.0.3] con la versión APR [1.7.2].
+31-May-2023 10:58:26.071 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL inicializado correctamente [OpenSSL 3.0.8 7 Feb 2023]
+31-May-2023 10:58:26.749 INFO [main] org.apache.coyote.AbstractProtocol.init Inicializando el manejador de protocolo ["http-nio-8080"]
+
+31-May-2023 10:58:26.783 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [1377] milliseconds
+31-May-2023 10:58:26.862 INFO [main] org.apache.catalina.core.StandardService.startInternal Arrancando servicio [Catalina]
+31-May-2023 10:58:26.862 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.1.8]
+31-May-2023 10:58:26.879 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Desplieque del descriptor de configuración [C:\Users\Lytos\Documents\NetBeansProjects\JSP_Gestion-Evento\Configuracion\apache-tomcat-10.1.8\conf\Catalina\localhost\Gestion_Eventos.xml]
+31-May-2023 10:58:26.900 WARNING [main] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/Gestion_Eventos] in deployment descriptor [C:\Users\Lytos\Documents\NetBeansProjects\JSP_Gestion-Evento\Configuracion\apache-tomcat-10.1.8\conf\Catalina\localhost\Gestion_Eventos.xml] has been ignored
+31-May-2023 10:58:28.929 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+31-May-2023 10:58:29.094 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\Lytos\Documents\NetBeansProjects\JSP_Gestion-Evento\Configuracion\apache-tomcat-10.1.8\conf\Catalina\localhost\Gestion_Eventos.xml] has finished in [2.213] ms
+31-May-2023 10:58:29.095 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Desplegando el directorio [C:\Users\Lytos\Documents\NetBeansProjects\JSP_Gestion-Evento\Configuracion\apache-tomcat-10.1.8\webapps\docs] de la aplicación web
+31-May-2023 10:58:29.181 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\Lytos\Documents\NetBeansProjects\JSP_Gestion-Evento\Configuracion\apache-tomcat-10.1.8\webapps\docs] has finished in [86] ms
+31-May-2023 10:58:29.181 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Desplegando el directorio [C:\Users\Lytos\Documents\NetBeansProjects\JSP_Gestion-Evento\Configuracion\apache-tomcat-10.1.8\webapps\examples] de la aplicación web
+31-May-2023 10:58:30.321 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\Lytos\Documents\NetBeansProjects\JSP_Gestion-Evento\Configuracion\apache-tomcat-10.1.8\webapps\examples] has finished in [1.140] ms
+31-May-2023 10:58:30.322 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Desplegando el directorio [C:\Users\Lytos\Documents\NetBeansProjects\JSP_Gestion-Evento\Configuracion\apache-tomcat-10.1.8\webapps\host-manager] de la aplicación web
+31-May-2023 10:58:30.433 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\Lytos\Documents\NetBeansProjects\JSP_Gestion-Evento\Configuracion\apache-tomcat-10.1.8\webapps\host-manager] has finished in [111] ms
+31-May-2023 10:58:30.433 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Desplegando el directorio [C:\Users\Lytos\Documents\NetBeansProjects\JSP_Gestion-Evento\Configuracion\apache-tomcat-10.1.8\webapps\manager] de la aplicación web
+31-May-2023 10:58:30.580 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\Lytos\Documents\NetBeansProjects\JSP_Gestion-Evento\Configuracion\apache-tomcat-10.1.8\webapps\manager] has finished in [147] ms
+31-May-2023 10:58:30.580 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Desplegando el directorio [C:\Users\Lytos\Documents\NetBeansProjects\JSP_Gestion-Evento\Configuracion\apache-tomcat-10.1.8\webapps\ROOT] de la aplicación web
+31-May-2023 10:58:30.645 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\Lytos\Documents\NetBeansProjects\JSP_Gestion-Evento\Configuracion\apache-tomcat-10.1.8\webapps\ROOT] has finished in [65] ms
+31-May-2023 10:58:30.651 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+31-May-2023 10:58:30.761 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [3976] milliseconds
+31-May-2023 12:54:16.313 INFO [http-nio-8080-exec-5] org.apache.catalina.core.StandardContext.reload Ha comenzado la recarga de Contexto [/Gestion_Eventos]
+31-May-2023 12:54:16.370 WARNING [http-nio-8080-exec-5] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc La aplicación web [Gestion_Eventos] registró el conductor JDBC [com.mysql.cj.jdbc.Driver] pero falló al anular el registro mientras la aplicación web estaba parada. Para prevenir un fallo de memoria, se ha anulado el registro del conductor JDBC por la fuerza.
+31-May-2023 12:54:16.372 WARNING [http-nio-8080-exec-5] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Gestion_Eventos] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@18.0.2/java.lang.Object.wait(Native Method)
+ java.base@18.0.2/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:91)
+ java.base@18.0.2/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+ java.base@18.0.2/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@18.0.2/java.lang.Thread.run(Thread.java:833)
+31-May-2023 12:54:18.143 INFO [http-nio-8080-exec-5] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+31-May-2023 12:54:18.150 INFO [http-nio-8080-exec-5] org.apache.catalina.core.StandardContext.reload Se ha completado la recarga de este Contexto
+31-May-2023 12:54:20.777 INFO [mysql-cj-abandoned-connection-cleanup] org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading Acceso ilegal: esta instancia de aplicación web ya ha sido parada.  Could not load [].  La eventual traza de pila que sigue ha sido motivada por un error lanzado con motivos de depuración así como para intentar terminar el hilo que motivó el acceso ilegal y no tiene impacto funcional.
+	java.lang.IllegalStateException: Acceso ilegal: esta instancia de aplicación web ya ha sido parada.  Could not load [].  La eventual traza de pila que sigue ha sido motivada por un error lanzado con motivos de depuración así como para intentar terminar el hilo que motivó el acceso ilegal y no tiene impacto funcional.
+		at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1457)
+		at org.apache.catalina.loader.WebappClassLoaderBase.getResource(WebappClassLoaderBase.java:1047)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.checkThreadContextClassLoader(AbandonedConnectionCleanupThread.java:123)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:90)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+31-May-2023 16:37:07.944 INFO [http-nio-8080-exec-17] org.apache.catalina.core.StandardContext.reload Ha comenzado la recarga de Contexto [/Gestion_Eventos]
+31-May-2023 16:37:08.081 WARNING [http-nio-8080-exec-17] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc La aplicación web [Gestion_Eventos] registró el conductor JDBC [com.mysql.cj.jdbc.Driver] pero falló al anular el registro mientras la aplicación web estaba parada. Para prevenir un fallo de memoria, se ha anulado el registro del conductor JDBC por la fuerza.
+31-May-2023 16:37:08.083 WARNING [http-nio-8080-exec-17] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Gestion_Eventos] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@18.0.2/java.lang.Object.wait(Native Method)
+ java.base@18.0.2/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:91)
+ java.base@18.0.2/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+ java.base@18.0.2/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@18.0.2/java.lang.Thread.run(Thread.java:833)
+31-May-2023 16:37:09.043 INFO [mysql-cj-abandoned-connection-cleanup] org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading Acceso ilegal: esta instancia de aplicación web ya ha sido parada.  Could not load [].  La eventual traza de pila que sigue ha sido motivada por un error lanzado con motivos de depuración así como para intentar terminar el hilo que motivó el acceso ilegal y no tiene impacto funcional.
+	java.lang.IllegalStateException: Acceso ilegal: esta instancia de aplicación web ya ha sido parada.  Could not load [].  La eventual traza de pila que sigue ha sido motivada por un error lanzado con motivos de depuración así como para intentar terminar el hilo que motivó el acceso ilegal y no tiene impacto funcional.
+		at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1457)
+		at org.apache.catalina.loader.WebappClassLoaderBase.getResource(WebappClassLoaderBase.java:1047)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.checkThreadContextClassLoader(AbandonedConnectionCleanupThread.java:123)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:90)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+31-May-2023 16:37:10.094 INFO [http-nio-8080-exec-17] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+31-May-2023 16:37:10.099 INFO [http-nio-8080-exec-17] org.apache.catalina.core.StandardContext.reload Se ha completado la recarga de este Contexto
+31-May-2023 16:37:34.869 INFO [main] org.apache.catalina.core.StandardServer.await Se ha recibido un comando de apagado a través del puerto de apagado. Parando la instancia del Servidor.
+31-May-2023 16:37:34.871 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+31-May-2023 16:37:34.934 INFO [main] org.apache.catalina.core.StandardService.stopInternal Parando servicio [Catalina]
+31-May-2023 16:37:35.030 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+31-May-2023 16:37:35.110 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]

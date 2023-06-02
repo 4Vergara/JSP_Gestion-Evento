@@ -18,5 +18,7 @@ public class TestEventoDaoJDBC {
             System.out.println(evento.getNombre());
                                    
         }
+        ClienteDaoJDBC clienteDao = new ClienteDaoJDBC();
+        long cedulaCliente = ClienteDaoJDBC.verificarCliente(1678902233);
     }
 }

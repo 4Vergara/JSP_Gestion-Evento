@@ -9,6 +9,7 @@ import domain.Cliente;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.sql.ResultSet;
 
 /**
  *
@@ -20,7 +21,7 @@ public class ClienteDaoJDBC {
     Connection cn = con.connect();
     PreparedStatement stmt;
 
-    private static final String SQL_INSERT = "INSERT INTO cliente (  cedula, nombre, apellido, correo, telefono)"
+    private static final String SQL_INSERT = "INSERT INTO Cliente (  cedula, nombre, apellido, correo, telefono)"
             + "VALUES (?, ?, ?, ?, ?)";
 
     public int insertar(Cliente cliente) {
@@ -41,5 +42,52 @@ public class ClienteDaoJDBC {
 
         return rows;
     }
+        
+    public static int verificarCliente(long cedulaCliente) {
+    int existeCliente = 0;
+    try {
+        Conexion con = new Conexion();
+        Connection cn = con.connect();
+        PreparedStatement stmt;
+
+        String SQL_SELECT_CEDULAS = "SELECT cedula FROM Cliente WHERE cedula = ?";
+
+        stmt = cn.prepareStatement(SQL_SELECT_CEDULAS);
+        stmt.setLong(1, cedulaCliente);
+
+        ResultSet rs = stmt.executeQuery();
+        if (rs.next()) {
+            existeCliente = 1;
+            System.out.println("El cliente con cédula " + cedulaCliente + " existe.");
+        } 
+    } catch (SQLException e) {
+        System.out.println("Error al buscar cédulas de clientes");
+    }
+    return existeCliente;
+}
+    
+    public static int verificarCorreo(String correoCliente) {
+    int existeCorreo = 0;
+    try {
+        Conexion con = new Conexion();
+        Connection cn = con.connect();
+        PreparedStatement stmt;
+
+        String SQL_SELECT_CORREO = "SELECT correo FROM Cliente WHERE correo = ?";
+
+        stmt = cn.prepareStatement(SQL_SELECT_CORREO);
+        stmt.setString(1, correoCliente);
+
+        ResultSet rs = stmt.executeQuery();
+        if (rs.next()) {
+            existeCorreo = 1;
+            System.out.println("El cliente con correo " + existeCorreo + " existe.");
+        } 
+    } catch (SQLException e) {
+        System.out.println("Error al buscar correos de clientes");
+    }
+    return existeCorreo;
+}
+
 
 }

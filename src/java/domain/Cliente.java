@@ -9,7 +9,7 @@ package domain;
  * @author Lytos
  */
 public class Cliente {
-    int id;     
+    int idCliente;     
     String nombre;
     String apellido;
     long cedula;
@@ -20,7 +20,7 @@ public class Cliente {
     }
     
     public Cliente(int id, String nombre, String apellido, long cedula, long telefono, String correo){
-        this.id = id;        
+        this.idCliente = id;        
         this.nombre = nombre;
         this.apellido = apellido;
         this.cedula = cedula;
@@ -36,11 +36,11 @@ public class Cliente {
     }
 
     public int getId() {
-        return id;
+        return idCliente;
     }
 
     public void setId(int id) {
-        this.id = id;
+        this.idCliente = id;
     }
 
     public String getNombre() {

@@ -80,6 +80,17 @@
                                 <input type="text" class="form-control" id="cardCVV" placeholder="123">
                                 <label for="cardCVV">CVV</label>
                             </div>
+                            <div class="form-floating mb-3">
+                                <select class="form-select" id="installments" aria-label="Número de Cuotas">                                    
+                                    <option value="6">6 cuotas</option>
+                                    <option value="12">12 cuotas</option>
+                                    <option value="18">18 cuotas</option>
+                                    <option value="24">24 cuotas</option>
+                                    <option value="30">30 cuotas</option>
+                                    <option value="36">36 cuotas</option>
+                                </select>
+                                <label for="installments">Número de Cuotas</label>
+                            </div>
                         </div>
                                                
                         

@@ -66,12 +66,34 @@ public class ClienteController extends HttpServlet {
         cliente.setNombre(nombre);
         cliente.setApellido(apellido);               
         cliente.setCorreo(correo);
-        cliente.setTelefono(telefono);        
+        cliente.setTelefono(telefono);
 
-        ClienteDaoJDBC clienteDao = new ClienteDaoJDBC();
-        clienteDao.insertar(cliente);
+        
+        long cedulaCliente = ClienteDaoJDBC.verificarCliente(cliente.getCedula());
+        int correoCliente = ClienteDaoJDBC.verificarCorreo(cliente.getCorreo());
+        
+        if(cedulaCliente==0 && correoCliente==0){
+            ClienteDaoJDBC clienteDao = new ClienteDaoJDBC();
+            clienteDao.insertar(cliente);
 
-        response.sendRedirect("http://localhost:8080/Gestion_Eventos/templates/clients/formaPago.jsp");
+            response.sendRedirect("http://localhost:8080/Gestion_Eventos/templates/clients/formaPago.jsp");
+            
+        }else if(cedulaCliente==1 && correoCliente==0){
+            System.out.println("Ya existe");
+            String mensajeError = "Ya existe un cliente con esa cedula";
+            response.sendRedirect("templates/clients/inscribirse.jsp?mensajeError=" + mensajeError);
+        }
+        else if(cedulaCliente==0 && correoCliente==1){
+            System.out.println("Ya existe");
+            String mensajeError = "Ya existe un cliente con ese correo";
+            response.sendRedirect("templates/clients/inscribirse.jsp?mensajeError=" + mensajeError);
+        }
+        else{
+            System.out.println("Ya existe");
+            String mensajeError = "Ya existe un cliente con ese correo y esa cedula";
+            response.sendRedirect("templates/clients/inscribirse.jsp?mensajeError=" + mensajeError);
+        }
+        
 
     }
 

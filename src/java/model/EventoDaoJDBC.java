@@ -9,6 +9,7 @@ import domain.Evento;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -21,7 +22,7 @@ public class EventoDaoJDBC {
             Connection cn = con.connect();
             PreparedStatement stmt;
 
-            String SQL_SELECT_NOMBRES = "SELECT nombre , descripcion FROM evento";           
+            String SQL_SELECT_NOMBRES = "SELECT nombre , descripcion ,fechaInicio , fechaFin FROM Evento";           
             
             stmt = cn.prepareStatement(SQL_SELECT_NOMBRES);
             ResultSet rs = stmt.executeQuery();
@@ -29,10 +30,12 @@ public class EventoDaoJDBC {
                 Evento evento = new Evento();
                 evento.setNombre(rs.getString(1));
                 evento.setDescripcion(rs.getString(2));
+                evento.setFechaInicio(rs.getDate(3));
+                evento.setFechaFin(rs.getDate(4));
                 nombres.add(evento);
             }
             System.out.println("Se encontraron eventos ");
-        } catch (Exception e) {
+        } catch (SQLException e) {
             System.out.println("Error al buscar eventos");            
         }
         return nombres;

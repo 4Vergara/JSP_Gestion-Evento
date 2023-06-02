@@ -45,6 +45,11 @@
 </head>
 
 <body>
+    <style>
+    #mensajeError {
+        color: red;
+    }
+    </style>
     <%@page import="java.util.List"%>
     <%@page import="domain.Evento"%>
     <%@page import="model.EventoDaoJDBC"%>
@@ -57,7 +62,7 @@
         </div>
         <!-- Spinner End -->
 
-        <!-- Sign Up Start -->
+        <!-- Formulario de inscripcion con los diferentes campos -->
         <div class="container-fluid">
             <div class="row h-100 align-items-center justify-content-center" style="min-height: 100vh;">
                 <div class="col-12 col-sm-8 col-md-6 col-lg-5 col-xl-4">
@@ -66,7 +71,14 @@
                             <a href="http://localhost:8080/Gestion_Eventos/templates/clients/mostrarEventos.jsp" class="">
                                 <h3 class="text-primary"><i class="fa me-2"></i>Logistic</h3>
                             </a>
-                            <h3>Registrate</h3>
+                            <h3>Inscribirse</h3>
+                        </div>
+                        <div id="mensajeError" >
+                            <% String mensajeError = request.getParameter("mensajeError");
+                                if (mensajeError != null) {
+                                    out.print(mensajeError);
+                                }
+                            %>
                         </div>
                         <form action="../../ClienteController" method="get" onsubmit="return validarFormulario()">
                             <div class="form-floating mb-3">
@@ -99,10 +111,12 @@
                                 </select>
                                 <label for="eventoSelect">Evento</label>
                             </div>
-                            <button type="submit" name="submit" class="btn btn-primary py-3 w-100 mb-4">Registrarte</button>
-                        </form>
+                            <button type="submit" name="submit" class="btn btn-primary py-3 w-100 mb-4">Inscribirse</button>
+                            <div id="clienteInscrito" style="display: none;">El cliente ya está inscrito</div>
+                        </form>         
+                        
 
-                        <script>
+                        <script>                            
                             function validarFormulario() {
                                 // Validar el campo nombre
                                 var nombre = document.querySelector('input[name="nombre"]').value;

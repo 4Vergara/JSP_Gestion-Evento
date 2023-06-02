@@ -105,15 +105,15 @@
         
         <!-- Content Start -->
         
-        <!-- Principal -->
+        <!-- Contiene el nombre de la empresa, el boton de registrase y extrae los nombres de los eventos de EventosDaoJDBC -->
             <div class="container-fluid pt-4 px-4">
                 <div class="top-bar-carlos">
                     <a href="http://localhost:8080/Gestion_Eventos/templates/clients/mostrarEventos.jsp" class="">
                         <h1 class="text-primary"><i class="fa me-2"></i>Logistic</h1>
                     </a>
-                    <form action="http://localhost:8080/Gestion_Eventos/templates/clients/registrarse.jsp" method="get" class="nav-link">
-                        <button type="submit" class="btn btn-primary py-2">Registrarte</button>
-                    </form>
+                    <form action="http://localhost:8080/Gestion_Eventos/templates/clients/inscribirse.jsp" method="get" class="nav-link">
+                        <button type="submit" class="btn btn-primary py-2">Inscribirse</button>
+                    </form>                    
                 </div>
                 <div class="row vh-100 bg-light rounded align-items-center justify-content-center mx-0 mt-4">
                     <% List<Evento> eventos = EventoDaoJDBC.getNombres();
@@ -121,6 +121,8 @@
                     <div class="col-md-12 text-center border-bottom py-5">
                         <h3><%= evento.getNombre() %></h3>
                         <p><%= evento.getDescripcion() %></p>
+                        <p>Fecha inicio: <%= evento.getFechaInicio() %></p>
+                        <p>Fecha Finalizacion: <%= evento.getFechaFin() %></p>
                         <!-- Agrega más información sobre el evento según sea necesario -->
                     </div>
                     <% } %>
